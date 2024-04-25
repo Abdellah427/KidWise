@@ -1,4 +1,4 @@
-package com.example.application.ui.theme
+package com.example.kidwise.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

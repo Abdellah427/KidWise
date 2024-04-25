@@ -13,6 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Application"
-include(":app")
- 
+rootProject.name = "KidWise"
+include ':app'
