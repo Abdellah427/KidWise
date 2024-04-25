@@ -14,5 +14,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/buttonRegisterPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Page d'enregistrement"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHelloWorld"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:onClick="goToRegisterPage"
+        tools:ignore="UnknownId" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
