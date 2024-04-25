@@ -14,4 +14,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "KidWise"
-include ':app'
+include(":app")
+ 
