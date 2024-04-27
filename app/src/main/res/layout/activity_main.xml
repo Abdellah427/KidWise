@@ -23,7 +23,7 @@
         android:id="@+id/login"
         android:layout_width="198dp"
         android:layout_height="49dp"
-        android:text="@string/loginButton"
+        android:text="@string/login"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
         android:id="@+id/register"
         android:layout_width="198dp"
         android:layout_height="49dp"
-        android:text="@string/registerButton"
+        android:text="@string/register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
