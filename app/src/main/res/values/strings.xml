@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">KidWise</string>
+    <string name="registerButton">Register</string>
+    <string name="loginButton">Login</string>
+    <string name="emailText">E-Mail</string>
+    <string name="passwordText">Password</string>
+    <string name="firstNameText">firstName</string>
+    <string name="lastNameText">lastName</string>
 </resources>
