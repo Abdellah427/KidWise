@@ -11,6 +11,19 @@
     <string name="lastName_hint">Enter your last name</string>
     <string name="last_name">Last Name</string>
     <string name="first_name">first Name</string>
+    <string name="learning">Learning</string>
+    <string name="playing">Playing</string>
+    <string name="hello">Hello</string>
+    <string name="read_clocks">Read Clocks</string>
+    <string name="learn_seasons">Learn Seasons</string>
+    <string name="count_days_of_the_week">Count Days of the Week</string>
+    <string name="count_months_of_the_year">Count Months of the Year</string>
+    <string name="digit_memory_game">Digit Memory Game</string>
+    <string name="word_spelling_game">Word Spelling Game</string>
+    <string name="follow_directions">Follow Directions</string>
+    <string name="multiplication_practice">Multiplication Practice</string>
+    <string name="find_similar_pictures">Find Similar Pictures</string>
+    <string name="follow_the_object">Follow the Object</string>
 
 
 </resources>

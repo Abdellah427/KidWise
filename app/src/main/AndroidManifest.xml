@@ -13,16 +13,49 @@
         android:theme="@style/Theme.KidWise"
         tools:targetApi="31">
         <activity
-            android:name=".HomeActivity"
+            android:name=".learning.FollowObjectActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".learning.SimilarPicturesActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".learning.MultiplicationActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".learning.DirectionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".learning.WordSpellActivity"
+            android:exported="false" />
+        <activity
+            android:name=".learning.DigitMemoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".learning.MonthsOfYearActivity"
+            android:exported="false" />
+        <activity
+            android:name=".learning.DaysOfWeekActivity"
+            android:exported="false" />
+        <activity
+            android:name=".learning.SeasonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".learning.ClockActivity"
+            android:exported="false" />
+        <activity
+            android:name=".redirect.LearningActivity"
+            android:exported="false" />
+        <activity
+            android:name=".redirect.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".account.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".account.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".redirect.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
