@@ -1,24 +1,29 @@
 package com.example.kidwise.learning;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.NumberPicker;
+import android.widget.EditText;
 import android.widget.TextView;
+import com.example.kidwise.learning.DigitalClockActivity;
 import com.example.kidwise.CustomClockView;
 import com.example.kidwise.R;
+
 import java.util.Random;
 
 public class ClockActivity extends AppCompatActivity {
 
-    private NumberPicker hourPicker, minutePicker;
     private Button nextButton;
     private TextView questionText;
+    private TextView answer;
     private CustomClockView customClockView;
     private int currentHour, currentMinute;
-    private int questionCount = 0;
-    private static final int TOTAL_QUESTIONS = 10;
+    private static int questionCount = 0;
+    private static final int TOTAL_QUESTIONS = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,26 +33,24 @@ public class ClockActivity extends AppCompatActivity {
         customClockView = findViewById(R.id.analog_clock);
         nextButton = findViewById(R.id.button_next);
         questionText = findViewById(R.id.textview_question);
-        hourPicker = findViewById(R.id.hour_picker);
-        minutePicker = findViewById(R.id.minute_picker);
-
-        // Configure the NumberPickers
-        hourPicker.setMinValue(1);
-        hourPicker.setMaxValue(12);
-
-        minutePicker.setMinValue(0);
-        minutePicker.setMaxValue(59);
-        minutePicker.setValue(0); // Initialize picker to 0
+        answer = findViewById(R.id.answer);
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int selectedHour = hourPicker.getValue();
-                int selectedMinute = minutePicker.getValue();
-                if (selectedHour == currentHour && selectedMinute == currentMinute) {
+                String writtenTime = answer.getText().toString().trim();
+                String analogTime = convertToAnalogTime(currentHour, currentMinute);
+
+                Log.d("writtenTime", writtenTime);
+                Log.d("analogTime", analogTime);
+                Log.d("hour", Integer.toString(currentHour));
+                Log.d("minute", Integer.toString(currentMinute));
+
+                if (writtenTime.equalsIgnoreCase(analogTime)) {
                     questionCount++;
                     if (questionCount < TOTAL_QUESTIONS) {
-                        generateRandomTime();
+                        Intent intent = new Intent(getApplicationContext(), DigitalClockActivity.class);
+                        startActivity(intent);
                     } else {
                         questionText.setText(getString(R.string.end_of_questions));
                         nextButton.setEnabled(false);
@@ -69,5 +72,50 @@ public class ClockActivity extends AppCompatActivity {
         customClockView.setTime(currentHour, currentMinute); // Set the time on the custom clock
 
         questionText.setText(getString(R.string.what_time_is_it));
+    }
+
+    private static String convertToAnalogTime(int hour, int minute) {
+        String[] numbers = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+                "eleven", "twelve"};
+        String[] tens = {"", "", "twenty", "thirty", "forty", "fifty"};
+
+        if (hour < 1 || hour > 12 || minute < 0 || minute > 59) {
+            return null;
+        }
+
+        String analogTime;
+
+        if (minute == 0) {
+            analogTime = numbers[hour] + " o'clock";
+        } else if (minute == 15) {
+            analogTime = "quarter past " + numbers[hour];
+        } else if (minute == 30) {
+            analogTime = "half past " + numbers[hour];
+        } else if (minute == 45) {
+            analogTime = "quarter to " + numbers[hour % 12 + 1];
+        } else {
+            String hourText = (hour % 12 == 0) ? numbers[12] : numbers[hour % 12];
+            String minuteText;
+            if (minute < 30) {
+                if (minute <=10) {
+                    minuteText = numbers[minute];
+                } else {
+                    minuteText = tens[minute / 10];
+                    minuteText += (minute % 10 == 0) ? "" : " "+numbers[minute% 10];
+                }
+                analogTime = minuteText + " past " + hourText;
+            } else {
+                minute = 60 - minute;
+                if (minute <=10) {
+                    minuteText = numbers[minute];
+                } else {
+                    minuteText = tens[minute / 10];
+                    minuteText += (minute % 10 == 0) ? "" : " "+numbers[minute% 10];
+                }
+                analogTime = minuteText + " to " + numbers[hour % 12 + 1];
+            }
+        }
+
+        return analogTime;
     }
 }

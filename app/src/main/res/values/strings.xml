@@ -30,6 +30,10 @@
     <string name="enter_the_hour_and_minutes">Enter the hour and minutes</string>
     <string name="end_of_questions">End of questions!</string>
     <string name="try_again">Try Again</string>
+    <string name="_00_00_am">00:00 AM</string>
+    <string name="enter_the_time_hh_mm_am_pm">Enter the time (hh:mm AM/PM)</string>
+    <string name="correct_answer" />
+    <string name="enter_answer">Enter answer</string>
 
 
 </resources>
