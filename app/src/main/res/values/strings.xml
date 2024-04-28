@@ -24,6 +24,12 @@
     <string name="multiplication_practice">Multiplication Practice</string>
     <string name="find_similar_pictures">Find Similar Pictures</string>
     <string name="follow_the_object">Follow the Object</string>
+    <string name="digital_clock">Digital Clock</string>
+    <string name="what_time_is_it">What time is it ?</string>
+    <string name="next">Next</string>
+    <string name="enter_the_hour_and_minutes">Enter the hour and minutes</string>
+    <string name="end_of_questions">End of questions!</string>
+    <string name="try_again">Try Again</string>
 
 
 </resources>
