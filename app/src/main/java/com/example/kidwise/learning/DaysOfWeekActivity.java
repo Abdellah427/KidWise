@@ -99,7 +99,7 @@ public class DaysOfWeekActivity extends AppCompatActivity {
 
 
         } else if (count == daysOfWeek.length) {
-            Toast.makeText(this, "Try again! Days are not in the correct order.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Try again ! Days are not in the correct order.", Toast.LENGTH_LONG).show();
             resetOrder();
         }
     }

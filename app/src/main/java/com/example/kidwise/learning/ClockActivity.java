@@ -57,8 +57,6 @@ public class ClockActivity extends AppCompatActivity {
                         nextButton.setEnabled(false);
                         questionCount=0;
                         ContinueDialog.showContinueDialog(ClockActivity.this, "You've completed all questions. Do you want to continue?", nextButton);
-
-                        finish();
                     }
                 } else {
                     questionText.setText(getString(R.string.try_again));
@@ -81,7 +79,8 @@ public class ClockActivity extends AppCompatActivity {
 
     private static String convertToAnalogTime(int hour, int minute) {
         String[] numbers = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
-                "eleven", "twelve"};
+                "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
+
         String[] tens = {"", "", "twenty", "thirty", "forty", "fifty"};
 
         if (hour < 1 || hour > 12 || minute < 0 || minute > 59) {
@@ -102,7 +101,7 @@ public class ClockActivity extends AppCompatActivity {
             String hourText = (hour % 12 == 0) ? numbers[12] : numbers[hour % 12];
             String minuteText;
             if (minute < 30) {
-                if (minute <=10) {
+                if (minute < 20) {
                     minuteText = numbers[minute];
                 } else {
                     minuteText = tens[minute / 10];
@@ -111,7 +110,7 @@ public class ClockActivity extends AppCompatActivity {
                 analogTime = minuteText + " past " + hourText;
             } else {
                 minute = 60 - minute;
-                if (minute <=10) {
+                if (minute < 20) {
                     minuteText = numbers[minute];
                 } else {
                     minuteText = tens[minute / 10];

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.kidwise.R;
 import com.example.kidwise.redirect.MainActivity;
@@ -23,7 +24,7 @@ public class DigitalClockActivity extends AppCompatActivity {
     private EditText writtenTimeEditText;
     private Button next;
     private int currentHour ;
-    private int currentMinute ; // Generate minutes from 0 to 59
+    private int currentMinute ;
     private String currentDigitalTime;
 
     @Override
@@ -44,7 +45,8 @@ public class DigitalClockActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 } else {
-                    digitalClockView.setText(getString(R.string.try_again));
+                    Toast.makeText(getApplicationContext(), "Incorrect, try again!", Toast.LENGTH_SHORT).show();
+
                 }
             }
         });

@@ -40,4 +40,5 @@
             android:onClick="checkAnswer"
             android:text="Submit" />
     </RelativeLayout>
+
 </RelativeLayout>

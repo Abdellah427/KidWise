@@ -93,7 +93,7 @@ public class DirectionsActivity extends AppCompatActivity {
         deselectAllRadioButtons();
         clearCrosses();
 
-        int correctAnswerPosition = new Random().nextInt(4); // Gets a random position 0-3
+        int correctAnswerPosition = new Random().nextInt(4);
         int imageId = getResources().getIdentifier("direction_" + directions[currentRound], "drawable", getPackageName());
         imageView.setImageResource(imageId);
 

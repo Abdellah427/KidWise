@@ -96,7 +96,7 @@ public class MonthsOfYearActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         } else if (count == monthsOfYear.length) {
-            Toast.makeText(this, "Try again! Months are not in the correct order.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Try again ! Months are not in the correct order.", Toast.LENGTH_LONG).show();
             resetOrder();
         }
     }
