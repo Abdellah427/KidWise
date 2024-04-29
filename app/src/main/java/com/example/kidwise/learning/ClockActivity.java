@@ -52,9 +52,12 @@ public class ClockActivity extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), DigitalClockActivity.class);
                         startActivity(intent);
                     } else {
-                        questionText.setText(getString(R.string.end_of_questions));
                         nextButton.setEnabled(false);
                         questionCount=0;
+                        Intent intent = new Intent(getApplicationContext(), CongratulationActivity.class);
+                        intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, "Congratulations!");
+                        startActivity(intent);
+                        finish();
                     }
                 } else {
                     questionText.setText(getString(R.string.try_again));

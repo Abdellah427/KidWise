@@ -1,6 +1,8 @@
 package com.example.kidwise.learning;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,7 +36,7 @@ public class MonthsOfYearActivity extends AppCompatActivity {
         for (String month : monthsOfYear) {
             monthsList.add(month);
         }
-        Collections.shuffle(monthsList); // Mélanger les mois de l'année
+        Collections.shuffle(monthsList);
 
         for (String month : monthsList) {
             Button monthButton = new Button(this);
@@ -88,7 +90,20 @@ public class MonthsOfYearActivity extends AppCompatActivity {
         }
 
         if (isInOrder && count == monthsOfYear.length) {
-            Toast.makeText(this, "Congratulations! Months are in the correct order!", Toast.LENGTH_LONG).show();
+            resetOrder();
+            Intent intent = new Intent(getApplicationContext(), CongratulationActivity.class);
+            intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, "Congratulations! Months are in the correct order!");
+            startActivity(intent);
+            finish();
+        } else if (count == monthsOfYear.length) {
+            Toast.makeText(this, "Try again! Months are not in the correct order.", Toast.LENGTH_LONG).show();
+            resetOrder();
         }
+    }
+
+    private void resetOrder() {
+        left_container.removeAllViews();
+        right_container.removeAllViews();
+        setupButtons();
     }
 }

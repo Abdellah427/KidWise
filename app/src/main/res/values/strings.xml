@@ -44,6 +44,8 @@
     <string name="saturday">Saturday</string>
     <string name="instruction_month">Click on the months to arrange them at the bottom in the correct order.</string>
     <string name="instruction_day">Click on the days to arrange them at the bottom in the correct order.</string>
+    <string name="congratulation">Congratulation</string>
+    <string name="go_to_home">Go to Home</string>
 
 
 </resources>

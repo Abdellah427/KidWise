@@ -1,17 +1,21 @@
 package com.example.kidwise.learning;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+import java.util.ArrayList;
+import java.util.Collections;
 
 import com.example.kidwise.R;
 
 public class DaysOfWeekActivity extends AppCompatActivity {
 
-    private LinearLayout topContainer, bottomContainer;
+    private LinearLayout left_container, right_container;
     private final String[] daysOfWeek = {
             "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
     };
@@ -19,60 +23,67 @@ public class DaysOfWeekActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_days_of_week); // Assurez-vous que ce fichier de layout existe
+        setContentView(R.layout.activity_days_of_week);
 
-        topContainer = findViewById(R.id.top_container);
-        bottomContainer = findViewById(R.id.bottom_container);
+        left_container = findViewById(R.id.left_container);
+        right_container = findViewById(R.id.right_container);
 
         setupButtons();
     }
 
     private void setupButtons() {
+        ArrayList<String> daysList = new ArrayList<>();
         for (String day : daysOfWeek) {
+            daysList.add(day);
+        }
+        Collections.shuffle(daysList);
+
+        for (String day : daysList) {
             Button dayButton = new Button(this);
             dayButton.setText(day);
             dayButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    moveButtonToBottomContainer((Button) v);
+                    moveButtonToRightContainer((Button) v);
                 }
             });
-            topContainer.addView(dayButton);
+            left_container.addView(dayButton);
         }
     }
 
-    private void moveButtonToBottomContainer(Button button) {
-        if (topContainer == ((LinearLayout) button.getParent())) {
-            topContainer.removeView(button);
-            bottomContainer.addView(button);
+    private void moveButtonToRightContainer(Button button) {
+        if (left_container == ((LinearLayout) button.getParent())) {
+            left_container.removeView(button);
+            right_container.addView(button);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    moveButtonToTopContainer((Button) v);
+                    moveButtonToLeftContainer((Button) v);
                 }
             });
         } else {
-            moveButtonToTopContainer(button);
+            moveButtonToLeftContainer(button);
         }
         checkOrder();
     }
 
-    private void moveButtonToTopContainer(Button button) {
-        bottomContainer.removeView(button);
-        topContainer.addView(button);
+    private void moveButtonToLeftContainer(Button button) {
+        right_container.removeView(button);
+        left_container.addView(button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveButtonToBottomContainer((Button) v);
+                moveButtonToRightContainer((Button) v);
             }
         });
+
     }
 
     private void checkOrder() {
         boolean isInOrder = true;
-        int count = bottomContainer.getChildCount();
+        int count = right_container.getChildCount();
         for (int i = 0; i < count; i++) {
-            Button button = (Button) bottomContainer.getChildAt(i);
+            Button button = (Button) right_container.getChildAt(i);
             if (!button.getText().toString().equals(daysOfWeek[i])) {
                 isInOrder = false;
                 break;
@@ -80,7 +91,22 @@ public class DaysOfWeekActivity extends AppCompatActivity {
         }
 
         if (isInOrder && count == daysOfWeek.length) {
-            Toast.makeText(this, "Congratulations! Days are in the correct order!", Toast.LENGTH_LONG).show();
+            resetOrder();
+            Intent intent = new Intent(getApplicationContext(), CongratulationActivity.class);
+            intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, "Congratulations! Days are in the correct order!");
+            startActivity(intent);
+            finish();
+
+
+        } else if (count == daysOfWeek.length) {
+            Toast.makeText(this, "Try again! Days are not in the correct order.", Toast.LENGTH_LONG).show();
+            resetOrder();
         }
+    }
+
+    private void resetOrder() {
+        left_container.removeAllViews();
+        right_container.removeAllViews();
+        setupButtons();
     }
 }
