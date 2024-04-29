@@ -40,12 +40,12 @@ public class ClockActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String writtenTime = answer.getText().toString().trim();
                 String analogTime = convertToAnalogTime(currentHour, currentMinute);
-
+                /*
                 Log.d("writtenTime", writtenTime);
                 Log.d("analogTime", analogTime);
                 Log.d("hour", Integer.toString(currentHour));
                 Log.d("minute", Integer.toString(currentMinute));
-
+                */
                 if (writtenTime.equalsIgnoreCase(analogTime)) {
                     questionCount++;
                     if (questionCount < TOTAL_QUESTIONS) {

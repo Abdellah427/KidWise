@@ -1,12 +1,15 @@
 package com.example.kidwise.learning;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.kidwise.learning.CongratulationActivity;
 
 import com.example.kidwise.R;
 
@@ -23,8 +26,9 @@ public class DirectionsActivity extends AppCompatActivity {
     private ImageView crossOne, crossTwo, crossThree, crossFour;
 
     private int currentRound = 0;
-    private final int totalRounds = 8; // Assuming you have 8 directions
+    private final int totalRounds = 8;
     private final String[] directions = {"behind", "between", "in", "in_front", "on", "to_the_left", "to_the_right", "under"};
+    private final String[] directionsWithout_ = {"Behind", "Between", "In", "In Front", "On", "To The Left", "To The Right", "Under"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +52,9 @@ public class DirectionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 RadioButton selectedRadioButton = (RadioButton) view;
-                boolean correct = selectedRadioButton.getText().toString().equals(directions[currentRound]);
+                boolean correct = selectedRadioButton.getText().toString().equals(directionsWithout_[currentRound]);
+                Log.d("selectedRadioButton", selectedRadioButton.getText().toString());
+                Log.d("directions", directions[currentRound]);
 
                 handleAnswer(selectedRadioButton, correct);
             }
@@ -69,7 +75,10 @@ public class DirectionsActivity extends AppCompatActivity {
             if (currentRound < totalRounds) {
                 setupQuestion();
             } else {
-                finish(); // End the activity
+                Intent intent = new Intent(getApplicationContext(), CongratulationActivity.class);
+                intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, "Congratulations! You now know all the positions!");
+                startActivity(intent);
+                finish();
             }
         } else {
             ImageView crossImageView = findViewById(getCrossId(selectedRadioButton.getId()));
@@ -83,22 +92,30 @@ public class DirectionsActivity extends AppCompatActivity {
     private void setupQuestion() {
         deselectAllRadioButtons();
         clearCrosses();
-        int correctAnswerPosition = new Random().nextInt(4);
+
+        int correctAnswerPosition = new Random().nextInt(4); // Gets a random position 0-3
         int imageId = getResources().getIdentifier("direction_" + directions[currentRound], "drawable", getPackageName());
         imageView.setImageResource(imageId);
 
-        List<String> options = new ArrayList<>(Arrays.asList(directions));
+        List<String> options = new ArrayList<>(Arrays.asList(directionsWithout_));
         options.remove(currentRound);
+
         Collections.shuffle(options);
 
+        while (options.size() > 3) {
+            options.remove(options.size() - 1);
+        }
+
+        // Add the correct answer at the random position in the list
+        options.add(correctAnswerPosition, directionsWithout_[currentRound]);
+
+        // Set the options to the radio buttons
         optionOne.setText(options.get(0));
         optionTwo.setText(options.get(1));
         optionThree.setText(options.get(2));
         optionFour.setText(options.get(3));
-
-        RadioButton[] buttons = {optionOne, optionTwo, optionThree, optionFour};
-        buttons[correctAnswerPosition].setText(directions[currentRound]);
     }
+
 
     private void clearCrosses() {
         crossOne.setVisibility(View.INVISIBLE);
@@ -126,4 +143,9 @@ public class DirectionsActivity extends AppCompatActivity {
         }
         return -1;
     }
-}
+
+
+    }
+
+
+
