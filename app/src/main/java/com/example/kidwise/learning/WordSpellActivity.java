@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.kidwise.ContinueDialog;
 import com.example.kidwise.R;
 
 import java.util.Locale;
@@ -52,26 +53,13 @@ public class WordSpellActivity extends AppCompatActivity {
     public void checkSpelling(View view) {
         String userEntry = spellingInput.getText().toString().trim();
         if (userEntry.equalsIgnoreCase(currentWord)) {
-            showContinueDialog();
+            ContinueDialog.showContinueDialog(this, "Congratulations! You've spelled the word correctly!", null);
         } else {
             Toast.makeText(this, "Incorrect, try again!", Toast.LENGTH_SHORT).show();
         }
         spellingInput.setText("");
     }
 
-    private void showContinueDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Correct!");
-        builder.setMessage("Would you like to continue or finish?");
-        builder.setPositiveButton("Continue", (dialog, which) -> pickWordAndSpeak());
-        builder.setNegativeButton("Finish", (dialog, which) -> {
-            Intent intent = new Intent(getApplicationContext(), CongratulationActivity.class);
-            intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, "Congratulations! You've mastered spelling!");
-            startActivity(intent);
-            finish();
-        });
-        builder.show();
-    }
 
     @Override
     protected void onDestroy() {
