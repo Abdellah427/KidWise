@@ -54,6 +54,7 @@ public class ClockActivity extends AppCompatActivity {
                     } else {
                         questionText.setText(getString(R.string.end_of_questions));
                         nextButton.setEnabled(false);
+                        questionCount=0;
                     }
                 } else {
                     questionText.setText(getString(R.string.try_again));
