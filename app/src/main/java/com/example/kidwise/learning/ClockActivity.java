@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.kidwise.ContinueDialog;
 import com.example.kidwise.learning.DigitalClockActivity;
 import com.example.kidwise.CustomClockView;
 import com.example.kidwise.R;
@@ -54,9 +56,8 @@ public class ClockActivity extends AppCompatActivity {
                     } else {
                         nextButton.setEnabled(false);
                         questionCount=0;
-                        Intent intent = new Intent(getApplicationContext(), CongratulationActivity.class);
-                        intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, "Congratulations!");
-                        startActivity(intent);
+                        ContinueDialog.showContinueDialog(ClockActivity.this, "You've completed all questions. Do you want to continue?", nextButton);
+
                         finish();
                     }
                 } else {
