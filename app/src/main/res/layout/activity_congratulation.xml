@@ -1,0 +1,25 @@
+<!-- activity_congratulation.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- TextView pour afficher le message de félicitations -->
+    <TextView
+        android:id="@+id/congratulation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:padding="16dp"/>
+
+    <!-- Bouton de redirection -->
+    <Button
+        android:id="@+id/redirect_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Home"
+        android:padding="8dp"/>
+
+</LinearLayout>
