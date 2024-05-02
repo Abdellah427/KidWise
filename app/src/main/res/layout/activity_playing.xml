@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="match_parent"
+    tools:context=".redirect.PlayingActivity">
+
+    <Button
+        android:id="@+id/clockButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="@string/read_clocks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/digitMemoryButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/digit_memory_game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clockButton"/>
+
+    <Button
+        android:id="@+id/seasonButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Seasons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/digitMemoryButton" />
+
+    <Button
+        android:id="@+id/daysOfWeekButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Days of Week"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seasonButton"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/monthsOfYearButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Months of Year"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/daysOfWeekButton"
+        android:layout_marginTop="16dp" />
+
+
+    <Button
+        android:id="@+id/wordSpellButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/word_spelling_game"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/monthsOfYearButton"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/directionsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/follow_directions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wordSpellButton"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/multiplicationButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/multiplication_practice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/directionsButton"
+        android:layout_marginTop="16dp" />
+    <Button
+        android:id="@+id/followObjectButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/follow_the_object"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multiplicationButton"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/similarPicturesButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/find_similar_pictures"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/followObjectButton"
+        android:layout_marginTop="16dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
