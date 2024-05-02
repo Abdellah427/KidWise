@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AlertDialog;
 
-import com.example.kidwise.learning.CongratulationActivity;
+import com.example.kidwise.playing.CongratulationActivity;
 
 public class ContinueDialog {
 

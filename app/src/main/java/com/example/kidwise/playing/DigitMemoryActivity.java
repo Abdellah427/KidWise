@@ -1,6 +1,5 @@
-package com.example.kidwise.learning;
+package com.example.kidwise.playing;
 
-import android.app.AlertDialog;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;

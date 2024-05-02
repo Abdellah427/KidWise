@@ -1,4 +1,4 @@
-package com.example.kidwise.learning;
+package com.example.kidwise.playing;
 
 import android.os.Bundle;
 import android.view.View;

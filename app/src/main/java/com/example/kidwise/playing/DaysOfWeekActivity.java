@@ -1,4 +1,4 @@
-package com.example.kidwise.learning;
+package com.example.kidwise.playing;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,17 +13,17 @@ import java.util.Collections;
 
 import com.example.kidwise.R;
 
-public class MonthsOfYearActivity extends AppCompatActivity {
+public class DaysOfWeekActivity extends AppCompatActivity {
 
     private LinearLayout left_container, right_container;
-    private final String[] monthsOfYear = {
-            "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+    private final String[] daysOfWeek = {
+            "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_months_of_year);
+        setContentView(R.layout.activity_days_of_week);
 
         left_container = findViewById(R.id.left_container);
         right_container = findViewById(R.id.right_container);
@@ -32,22 +32,22 @@ public class MonthsOfYearActivity extends AppCompatActivity {
     }
 
     private void setupButtons() {
-        ArrayList<String> monthsList = new ArrayList<>();
-        for (String month : monthsOfYear) {
-            monthsList.add(month);
+        ArrayList<String> daysList = new ArrayList<>();
+        for (String day : daysOfWeek) {
+            daysList.add(day);
         }
-        Collections.shuffle(monthsList);
+        Collections.shuffle(daysList);
 
-        for (String month : monthsList) {
-            Button monthButton = new Button(this);
-            monthButton.setText(month);
-            monthButton.setOnClickListener(new View.OnClickListener() {
+        for (String day : daysList) {
+            Button dayButton = new Button(this);
+            dayButton.setText(day);
+            dayButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     moveButtonToRightContainer((Button) v);
                 }
             });
-            left_container.addView(monthButton);
+            left_container.addView(dayButton);
         }
     }
 
@@ -76,6 +76,7 @@ public class MonthsOfYearActivity extends AppCompatActivity {
                 moveButtonToRightContainer((Button) v);
             }
         });
+
     }
 
     private void checkOrder() {
@@ -83,20 +84,22 @@ public class MonthsOfYearActivity extends AppCompatActivity {
         int count = right_container.getChildCount();
         for (int i = 0; i < count; i++) {
             Button button = (Button) right_container.getChildAt(i);
-            if (!button.getText().toString().equals(monthsOfYear[i])) {
+            if (!button.getText().toString().equals(daysOfWeek[i])) {
                 isInOrder = false;
                 break;
             }
         }
 
-        if (isInOrder && count == monthsOfYear.length) {
+        if (isInOrder && count == daysOfWeek.length) {
             resetOrder();
             Intent intent = new Intent(getApplicationContext(), CongratulationActivity.class);
-            intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, "Congratulations! Months are in the correct order!");
+            intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, "Congratulations! Days are in the correct order!");
             startActivity(intent);
             finish();
-        } else if (count == monthsOfYear.length) {
-            Toast.makeText(this, "Try again ! Months are not in the correct order.", Toast.LENGTH_LONG).show();
+
+
+        } else if (count == daysOfWeek.length) {
+            Toast.makeText(this, "Try again ! Days are not in the correct order.", Toast.LENGTH_LONG).show();
             resetOrder();
         }
     }

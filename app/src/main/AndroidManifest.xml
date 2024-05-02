@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,45 +15,73 @@
         android:theme="@style/Theme.KidWise"
         tools:targetApi="31">
         <activity
-            android:name=".learning.CongratulationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".learning.DigitalClockActivity"
-            android:exported="false" />
-        <activity
-            android:name=".learning.FollowObjectActivity"
-            android:exported="false" />
-        <activity
-            android:name=".learning.SimilarPicturesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".learning.MultiplicationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".learning.DirectionsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".learning.WordSpellActivity"
-
-            android:exported="false" />
-        <activity
-            android:name=".learning.DigitMemoryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".learning.MonthsOfYearActivity"
-            android:exported="false" />
-        <activity
-            android:name=".learning.DaysOfWeekActivity"
-            android:exported="false" />
-        <activity
-            android:name=".learning.SeasonActivity"
-            android:exported="false" />
-        <activity
-            android:name=".learning.ClockActivity"
-            android:exported="false" />
-        <activity
             android:name=".redirect.LearningActivity"
             android:exported="false" />
+        <activity
+            android:name=".redirect.PlayingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".learning.ClockActivityL"
+            android:exported="false" />
+        <activity
+            android:name=".learning.MultiplicationActivityL"
+            android:exported="false" />
+
+        <activity
+            android:name=".learning.WordSpellActivityL"
+            android:exported="false" />
+        <activity
+            android:name=".learning.SimilarPicturesActivityL"
+            android:exported="false" />
+        <activity
+            android:name=".learning.SeasonActivityL"
+            android:exported="false" />
+        <activity
+            android:name=".learning.MonthsOfYearActivityL"
+            android:exported="false" />
+        <activity
+            android:name=".learning.DirectionsActivityL"
+            android:exported="false" />
+        <activity
+            android:name=".learning.DaysOfWeekActivityL"
+            android:exported="false" />
+        <activity
+            android:name=".playing.CongratulationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".playing.DigitalClockActivity"
+            android:exported="false" />
+        <activity
+            android:name=".playing.FollowObjectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".playing.SimilarPicturesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".playing.MultiplicationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".playing.DirectionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".playing.WordSpellActivity"
+            android:exported="false" />
+        <activity
+            android:name=".playing.DigitMemoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".playing.MonthsOfYearActivity"
+            android:exported="false" />
+        <activity
+            android:name=".playing.DaysOfWeekActivity"
+            android:exported="false" />
+        <activity
+            android:name=".playing.SeasonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".playing.ClockActivity"
+            android:exported="false" />
+
         <activity
             android:name=".redirect.HomeActivity"
             android:exported="false" />

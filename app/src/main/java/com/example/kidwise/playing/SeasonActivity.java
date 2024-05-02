@@ -1,4 +1,4 @@
-package com.example.kidwise.learning;
+package com.example.kidwise.playing;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.kidwise.R;
-import com.example.kidwise.learning.CongratulationActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -106,10 +105,8 @@ public class SeasonActivity extends AppCompatActivity {
             options.remove(options.size() - 1);
         }
 
-        // Add the correct answer at the random position in the list
         options.add(correctAnswerPosition, seasonsWithCapital[currentRound]);
 
-        // Set the options to the radio buttons
         optionOne.setText(options.get(0));
         optionTwo.setText(options.get(1));
         optionThree.setText(options.get(2));

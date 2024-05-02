@@ -11,6 +11,7 @@ import android.widget.Button;
 import com.example.kidwise.account.LoginActivity;
 import com.example.kidwise.R;
 import com.example.kidwise.account.RegisterActivity;
+import com.example.kidwise.playing.FollowObjectActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent loginActivity = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(loginActivity);
-                finish();  // Optionally, remove this if you want users to be able to return to the main activity
+                
             }
         });
 
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent registerActivity = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(registerActivity);
-                finish();
+
             }
         });
     }

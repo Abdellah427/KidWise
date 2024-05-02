@@ -1,4 +1,4 @@
-package com.example.kidwise.learning;
+package com.example.kidwise.playing;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,6 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.kidwise.learning.CongratulationActivity;
 
 import com.example.kidwise.R;
 
@@ -27,6 +26,7 @@ public class DirectionsActivity extends AppCompatActivity {
 
     private int currentRound = 0;
     private final int totalRounds = 8;
+
     private final String[] directions = {"behind", "between", "in", "in_front", "on", "to_the_left", "to_the_right", "under"};
     private final String[] directionsWithout_ = {"Behind", "Between", "In", "In Front", "On", "To The Left", "To The Right", "Under"};
 
@@ -106,10 +106,8 @@ public class DirectionsActivity extends AppCompatActivity {
             options.remove(options.size() - 1);
         }
 
-        // Add the correct answer at the random position in the list
         options.add(correctAnswerPosition, directionsWithout_[currentRound]);
 
-        // Set the options to the radio buttons
         optionOne.setText(options.get(0));
         optionTwo.setText(options.get(1));
         optionThree.setText(options.get(2));

@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.kidwise.R;
-import com.example.kidwise.account.RegisterActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -23,6 +22,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private TextView firstNameTextView;
     private Button learning;
+    private Button playing;
     private DatabaseReference databaseReference;
 
     @Override
@@ -30,15 +30,12 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        // Initialize views
         firstNameTextView = findViewById(R.id.firstNameTextView);
         learning = findViewById(R.id.learning);
+        playing = findViewById(R.id.playing);
 
-
-        // Initialize Firebase Database Reference
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
-        // Get current user ID
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             String userId = user.getUid();
@@ -68,7 +65,15 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent learningActivity = new Intent(getApplicationContext(), LearningActivity.class);
                 startActivity(learningActivity);
-                finish();
+
+            }
+        });
+        playing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent playingActivity = new Intent(getApplicationContext(), PlayingActivity.class);
+                startActivity(playingActivity);
+
             }
         });
     }

@@ -5,7 +5,7 @@
     android:layout_width="200dp"
     android:layout_gravity="center_horizontal"
     android:layout_height="match_parent"
-    tools:context=".redirect.LearningActivity">
+    tools:context=".redirect.PlayingActivity">
 
     <Button
         android:id="@+id/clockButton"
@@ -18,16 +18,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <Button
+        android:id="@+id/digitMemoryButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/digit_memory_game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clockButton"/>
+
     <Button
         android:id="@+id/seasonButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="@string/learn_seasons"
+        android:text="Seasons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/clockButton" />
+        app:layout_constraintTop_toBottomOf="@id/digitMemoryButton" />
 
     <Button
         android:id="@+id/daysOfWeekButton"
@@ -57,7 +69,7 @@
         android:text="@string/word_spelling_game"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/daysOfWeekButton"
+        app:layout_constraintTop_toBottomOf="@id/monthsOfYearButton"
         android:layout_marginTop="16dp" />
 
     <Button
@@ -79,6 +91,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/directionsButton"
         android:layout_marginTop="16dp" />
+    <Button
+        android:id="@+id/followObjectButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/follow_the_object"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multiplicationButton"
+        android:layout_marginTop="16dp" />
 
     <Button
         android:id="@+id/similarPicturesButton"
@@ -87,7 +108,7 @@
         android:text="@string/find_similar_pictures"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/multiplicationButton"
+        app:layout_constraintTop_toBottomOf="@id/followObjectButton"
         android:layout_marginTop="16dp" />
 
 

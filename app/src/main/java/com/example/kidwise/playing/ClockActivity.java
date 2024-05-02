@@ -1,17 +1,14 @@
-package com.example.kidwise.learning;
+package com.example.kidwise.playing;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.kidwise.ContinueDialog;
-import com.example.kidwise.learning.DigitalClockActivity;
 import com.example.kidwise.CustomClockView;
 import com.example.kidwise.R;
 

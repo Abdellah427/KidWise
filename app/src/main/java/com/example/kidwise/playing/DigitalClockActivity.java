@@ -1,4 +1,4 @@
-package com.example.kidwise.learning;
+package com.example.kidwise.playing;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,11 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.kidwise.R;
-import com.example.kidwise.redirect.MainActivity;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Locale;
 import java.util.Random;
 
 public class DigitalClockActivity extends AppCompatActivity {
