@@ -22,7 +22,7 @@ public class SimilarPicturesActivityL extends AppCompatActivity {
             { R.drawable.imagesimilar_d1, R.drawable.imagesimilar_d2, R.drawable.imagesimilar_d3 }  // Hightech
     };
 
-    private final String[] themes = {"Ville", "Nature", "Animal", "Hightech"};
+    private final String[] themes = {"City", "Nature", "Animal", "Hightech"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
