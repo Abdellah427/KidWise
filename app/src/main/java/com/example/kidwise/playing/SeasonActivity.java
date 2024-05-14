@@ -27,7 +27,7 @@ public class SeasonActivity extends AppCompatActivity {
     private int currentRound = 0;
     private final int totalRounds = 4;
     private final String[] seasons = {"spring", "summer", "autumn", "winter"};
-    private final String[] seasonsWithCapital = {"Spring", "Summer", "Autumn", "Winter"};
+    private String[] seasonsWithCapital;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +44,13 @@ public class SeasonActivity extends AppCompatActivity {
         crossTwo = findViewById(R.id.crossTwo);
         crossThree = findViewById(R.id.crossThree);
         crossFour = findViewById(R.id.crossFour);
+
+        seasonsWithCapital = new String[]{
+                getString(R.string.spring),
+                getString(R.string.summer),
+                getString(R.string.autumn),
+                getString(R.string.winter)
+        };
 
         setupQuestion();
 
@@ -69,13 +76,13 @@ public class SeasonActivity extends AppCompatActivity {
         deselectAllRadioButtons();
         clearCrosses();
         if (correct) {
-            Toast.makeText(SeasonActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SeasonActivity.this, getString(R.string.correct_answer), Toast.LENGTH_SHORT).show();
             currentRound++;
             if (currentRound < totalRounds) {
                 setupQuestion();
             } else {
                 Intent intent = new Intent(getApplicationContext(), CongratulationActivity.class);
-                intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, "Congratulations! You now know all the seasons!");
+                intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, getString(R.string.congratulations_all_seasons));
                 startActivity(intent);
                 finish();
             }
@@ -84,9 +91,10 @@ public class SeasonActivity extends AppCompatActivity {
             if (crossImageView != null) {
                 crossImageView.setVisibility(View.VISIBLE);
             }
-            Toast.makeText(SeasonActivity.this, "Incorrect, try again!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SeasonActivity.this, getString(R.string.incorrect_try_again), Toast.LENGTH_SHORT).show();
         }
     }
+
 
     private void setupQuestion() {
         deselectAllRadioButtons();

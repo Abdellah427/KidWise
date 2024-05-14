@@ -13,7 +13,7 @@
         android:textAlignment="center"
         android:padding="16dp"
         android:background="#CCCCCC"
-        android:text="Summer" />
+        android:text="@string/summer" />
 
     <VideoView
         android:id="@+id/videoView"
@@ -32,7 +32,7 @@
         android:layout_height="73dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"
-        android:text="Next"
+        android:text="@string/next"
         android:textSize="20sp" />
 
 </LinearLayout>

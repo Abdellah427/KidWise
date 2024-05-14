@@ -15,9 +15,8 @@ public class SeasonActivityL extends AppCompatActivity {
     private TextView seasonTextView;
 
     private int currentSeasonIndex = 0;
+    private String[] seasonNames;
     private int[] seasonVideos = {R.raw.autumn, R.raw.winter, R.raw.spring, R.raw.summer};
-    private String[] seasonNames = {"Autumn", "Winter", "Spring", "Summer"};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +24,13 @@ public class SeasonActivityL extends AppCompatActivity {
 
         videoView = findViewById(R.id.videoView);
         nextButton = findViewById(R.id.button_next);
-        seasonTextView = findViewById(R.id.textView_season); // Le TextView pour afficher le nom de la saison
-
+        seasonTextView = findViewById(R.id.textView_season);
+        seasonNames = new String[]{
+                getString(R.string.spring),
+                getString(R.string.summer),
+                getString(R.string.autumn),
+                getString(R.string.winter)
+        };
         loadSeasonVideo(currentSeasonIndex);
 
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +46,6 @@ public class SeasonActivityL extends AppCompatActivity {
         videoView.setVideoPath("android.resource://" + getPackageName() + "/" + seasonVideos[index]);
         videoView.start();
 
-        // Mettre à jour le texte du TextView pour afficher le nom de la saison correspondante
         seasonTextView.setText(seasonNames[index]);
     }
 }
