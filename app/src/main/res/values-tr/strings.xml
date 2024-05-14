@@ -1,3 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="app_name">KidWise</string>
+    <string name="register">Kayıt Ol</string>
+    <string name="login">Giriş Yap</string>
+
+    <string name="email_hint">E-posta adresinizi girin</string>
+    <string name="password_hint">Şifrenizi girin</string>
+    <string name="firstName_hint">Adınızı girin</string>
+    <string name="lastName_hint">Soyadınızı girin</string>
+    <string name="last_name">Soyadı</string>
+    <string name="first_name">Adı</string>
+    <string name="learning">Öğrenme</string>
+    <string name="playing">Oynama</string>
+    <string name="hello">Merhaba</string>
+    <string name="read_clocks">Saatleri Oku</string>
+    <string name="learn_seasons">Mevsimleri Öğren</string>
+    <string name="count_days_of_the_week">Haftanın Günlerini Say</string>
+    <string name="count_months_of_the_year">Yılın Aylarını Say</string>
+    <string name="digit_memory_game">Rakam Hafıza Oyunu</string>
+    <string name="word_spelling_game">Kelime Yazım Oyunu</string>
+    <string name="follow_directions">Yönleri Takip Et</string>
+    <string name="multiplication_practice">Çarpma Egzersizi</string>
+    <string name="find_similar_pictures">Benzer Resimleri Bul</string>
+    <string name="follow_the_object">Objeyi Takip Et</string>
+    <string name="digital_clock">Dijital Saat</string>
+    <string name="what_time_is_it">Saat kaç?</string>
+    <string name="next">Sonraki</string>
+    <string name="enter_the_hour_and_minutes">Saati ve dakikayı girin</string>
+    <string name="end_of_questions">Soruların Sonu!</string>
+    <string name="try_again">Tekrar Dene</string>
+    <string name="_00_00_am">00:00 AM</string>
+    <string name="enter_the_time_hh_mm_am_pm">Saat (ss:dd AM/PM) girin</string>
+    <string name="enter_answer">Cevabı girin</string>
+    <string name="drag_and_drop_instruction">Haftanın günlerini doğru sıraya sürükleyin.</string>
+    <string name="instruction_month">Ayları doğru sıraya dizmek için aylara tıklayın.</string>
+    <string name="instruction_day">Günleri doğru sıraya dizmek için günlerin üzerine tıklayın.</string>
+    <string name="congratulation">Tebrikler</string>
+    <string name="go_to_home">Anasayfaya Git</string>
+    <string name="reset">Sıfırla</string>
+    <string name="go_to_home_1">Anasayfaya Git</string>
+    <string name="remember_the_digits_from_beginning_to_end">Rakamları baştan sona hatırla</string>
+    <string name="submit">Gönder</string>
+    <string name="start">Başla</string>
+    <string name="reset_1">Sıfırla</string>
+    <string name="question">Soru</string>
+    <string name="enter_your_answer">Cevabınızı girin</string>
+    <string name="next_table">Sonraki Tablo</string>
+    <string name="days_of_week">Haftanın Günleri</string>
+    <string name="months_of_year">Yılın Ayları</string>
+    <string name="seasons">Mevsimler</string>
+    <string name="summer">Yaz</string>
+    <string name="type_the_correct_spelling">Doğru yazımı yazın</string>
+
+    <string name="authentication_successful">Kimlik doğrulama başarılı </string>
+    <string name="authentication_failed">Kimlik doğrulama başarısız:</string>
+    <string name="please_enter_email_and_password">Lütfen e-posta ve şifre girin.</string>
+
+    <string name="fill_all_fields">Lütfen tüm alanları doldurun.</string>
+    <string name="registration_successful">Kayıt başarılı.</string>
+    <string name="failed_to_save_user_info">Kullanıcı bilgileri kaydedilemedi: %s</string>
+    <string name="authentication_failed_s">Kimlik doğrulama başarısız: %s</string>
+    <string name="digital_time">Dijital Saat</string>
+    <string name="analog_time">Analog Saat</string>
+    <string name="monday">Pazartesi</string>
+    <string name="tuesday">Salı</string>
+    <string name="wednesday">Çarşamba</string>
+    <string name="thursday">Perşembe</string>
+    <string name="friday">Cuma</string>
+    <string name="saturday">Cumartesi</string>
+    <string name="sunday">Pazar</string>
+    <string name="behind">arkasında</string>
+    <string name="between">arasında</string>
+    <string name="in">içinde</string>
+    <string name="in_front">önünde</string>
+    <string name="on">üzerinde</string>
+    <string name="to_the_left">sola</string>
+    <string name="to_the_right">sağa</string>
+    <string name="under">altında</string>
+
+    <string name="behind_without_">Arkasında</string>
+    <string name="between_without_">Arasında</string>
+    <string name="in_without_">İçinde</string>
+    <string name="in_front_without_">Önünde</string>
+    <string name="on_without_">Üzerinde</string>
+    <string name="to_the_left_without_">Sola</string>
+    <string name="to_the_right_without_">Sağa</string>
+    <string name="under_without_">Altında</string>
+    <string name="january">Ocak</string>
+    <string name="february">Şubat</string>
+    <string name="march">Mart</string>
+    <string name="april">Nisan</string>
+    <string name="may">Mayıs</string>
+    <string name="june">Haziran</string>
+    <string name="july">Temmuz</string>
+    <string name="august">Ağustos</string>
+    <string name="september">Eylül</string>
+    <string name="october">Ekim</string>
+    <string name="november">Kasım</string>
+    <string name="december">Aralık</string>
+    <string name="autumn">Sonbahar</string>
+    <string name="winter">Kış</string>
+    <string name="spring">Bahar</string>
+    <string name="theme_city">Şehir</string>
+    <string name="theme_nature">Doğa</string>
+    <string name="theme_animal">Hayvan</string>
+    <string name="theme_hightech">Yüksek Teknoloji</string>
+    <string name="example">örnek</string>
+    <string name="communication">iletişim</string>
+    <string name="international">uluslararası</string>
+    <string name="development">gelişim</string>
+    <string name="environment">çevre</string>
+    <string name="programming">programlama</string>
+    <string name="technology">teknoloji</string>
+    <string name="education">eğitim</string>
+    <string name="challenge">meydan okuma</string>
+    <string name="correct_next_sequence">Doğru! Sonraki sıraya hazırlanın.</string>
+    <string name="congratulations_message_number">Tebrikler! Sayı sıralamasını başarıyla tamamladınız!</string>
+
+    <string name="innovation">yenilik</string>
+    <string name="opportunity">fırsat</string>
+    <string name="experience">deneyim</string>
+    <string name="knowledge">bilgi</string>
+    <string name="creativity">yaratıcılık</string>
+    <string name="solution">çözüm</string>
+    <string name="enter_digits_forward">Lütfen rakamları baştan sona girin</string>
+    <string name="enter_digits_backward">Lütfen rakamları tersten girin</string>
+    <string name="achievement">başarı</string>
+    <string name="motivation">motivasyon</string>
+    <string name="inspiration">ilham</string>
+    <string name="success">başarı</string>
+    <string name="imagination">hayal gücü</string>
+    <string name="complete_questions_prompt">Tüm soruları tamamladınız. Devam etmek ister misiniz?</string>
+    <string name="congratulations_message">Tebrikler! Günler doğru sırayla!</string>
+    <string name="try_again_message">Tekrar deneyin! Günler doğru sırayla değil.</string>
+    <string name="incorrect_try_again">Yanlış, tekrar deneyin!</string>
+    <string name="reset_button_text">Sıfırla</string>
+    <string name="instructions_forward">Rakamları baştan sona hatırla</string>
+    <string name="instructions_backward">Rakamları tersten hatırla</string>
+    <string name="correct_answer">Doğru!</string>
+    <string name="congratulations_message_word">Tebrikler! %d kelimeyi doğru yazdınız!</string>
+    <string name="congratulations_title">Tebrikler!</string>
+    <string name="continue_button">Devam</string>
+    <string name="finish_button">Bitir</string>
+    <string name="just_congratulations_message">Tebrikler!</string>
+
+
+    <string name="months_correct_order_message">Tebrikler! Aylar doğru sırada!</string>
+    <string name="months_incorrect_order_message">Tekrar deneyin! Aylar doğru sırada değil.</string>
+    <string name="enter_number">Lütfen bir sayı girin.</string>
+    <string name="completed_all_rounds_message">Tüm turu tamamladınız!</string>
+
+    <string-array name="seasons_with_capital_array">
+        <item>İlkbahar</item>
+        <item>Yaz</item>
+        <item>Sonbahar</item>
+        <item>Kış</item>
+    </string-array>
+    <string name="congratulations_all_seasons">Tebrikler! Artık tüm mevsimleri biliyorsunuz!</string>
+
+
+
+    <string name="congratulations_all_positions">Tebrikler! Artık tüm konumları biliyorsunuz!</string>
+    <string name="direction_behind_capitalized">Arkasında</string>
+    <string name="direction_between_capitalized">Arasında</string>
+    <string name="direction_in_capitalized">İçinde</string>
+    <string name="direction_in_front_capitalized">Önünde</string>
+    <string name="follow_ball_instructions">Topu gözlerinizle takip edin.</string>
+
+    <string name="direction_on_capitalized">Üzerinde</string>
+    <string name="direction_to_the_left_capitalized">Sola</string>
+    <string name="direction_to_the_right_capitalized">Sağa</string>
+    <string name="direction_under_capitalized">Altında</string>
+    <string name="days_of_week1">Haftanın Günleri</string>
+    <string name="months_of_year1">Yılın Ayları</string>
+    <string name="change_language">Dil Değiştir</string>
+
+
+
 </resources>

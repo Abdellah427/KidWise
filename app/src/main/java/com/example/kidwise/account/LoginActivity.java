@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
                     .addOnCompleteListener(this, task -> {
                         if (task.isSuccessful()) {
                             // Sign in success
-                            Toast.makeText(LoginActivity.this, "Authentication successful.",
+                            Toast.makeText(LoginActivity.this, getString(R.string.authentication_successful),
                             Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                             startActivity(intent);
@@ -57,12 +57,12 @@ public class LoginActivity extends AppCompatActivity {
 
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(LoginActivity.this, "Authentication failed: " + task.getException().getMessage(),
+                            Toast.makeText(LoginActivity.this, getString(R.string.authentication_failed) + task.getException().getMessage(),
                                     Toast.LENGTH_LONG).show();
                         }
                     });
         } else {
-            Toast.makeText(this, "Please enter email and password.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.please_enter_email_and_password), Toast.LENGTH_SHORT).show();
         }
     }
 }

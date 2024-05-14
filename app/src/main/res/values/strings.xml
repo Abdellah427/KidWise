@@ -4,6 +4,8 @@
     <string name="app_name">KidWise</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
+    <string name="change_language">Change Language</string>
+
 
     <string name="email_hint">Enter your email</string>
     <string name="password_hint">Enter your password</string>
@@ -32,21 +34,148 @@
     <string name="try_again">Try Again</string>
     <string name="_00_00_am">00:00 AM</string>
     <string name="enter_the_time_hh_mm_am_pm">Enter the time (hh:mm AM/PM)</string>
-    <string name="correct_answer" />
     <string name="enter_answer">Enter answer</string>
     <string name="drag_and_drop_instruction">Drag and drop the days of the week into the correct order.</string>
-    <string name="sunday">Sunday</string>
+    <string name="instruction_month">Click on the months to arrange them at the bottom in the correct order.</string>
+    <string name="instruction_day">Click on the days to arrange them at the bottom in the correct order.</string>
+    <string name="congratulation">Congratulation</string>
+    <string name="go_to_home">Go to Home</string>
+    <string name="reset">Reset</string>
+    <string name="go_to_home_1">Go to Home</string>
+    <string name="remember_the_digits_from_beginning_to_end">Remember the digits from beginning to end</string>
+    <string name="submit">Submit</string>
+    <string name="start">Start</string>
+    <string name="reset_1">Reset</string>
+    <string name="question">Question</string>
+    <string name="enter_your_answer">Enter your answer</string>
+    <string name="next_table">Next Table</string>
+    <string name="days_of_week">Days of Week</string>
+    <string name="months_of_year">Months of Year</string>
+    <string name="seasons">Seasons</string>
+    <string name="summer">Summer</string>
+    <string name="type_the_correct_spelling">Type the correct spelling</string>
+
+    <string name="authentication_successful">Authentication successful </string>
+    <string name="authentication_failed">Authentication failed :</string>
+    <string name="please_enter_email_and_password">Please enter email and password.</string>
+
+    <string name="fill_all_fields">Please fill in all fields.</string>
+    <string name="registration_successful">Registration successful.</string>
+    <string name="failed_to_save_user_info">Failed to save user information: %s</string>
+    <string name="authentication_failed_s">Authentication failed: %s</string>
+    <string name="digital_time">Digital Time</string>
+    <string name="analog_time">Analog Time</string>
     <string name="monday">Monday</string>
     <string name="tuesday">Tuesday</string>
     <string name="wednesday">Wednesday</string>
     <string name="thursday">Thursday</string>
     <string name="friday">Friday</string>
     <string name="saturday">Saturday</string>
-    <string name="instruction_month">Click on the months to arrange them at the bottom in the correct order.</string>
-    <string name="instruction_day">Click on the days to arrange them at the bottom in the correct order.</string>
-    <string name="congratulation">Congratulation</string>
-    <string name="go_to_home">Go to Home</string>
-    <string name="reset">Reset</string>
+    <string name="sunday">Sunday</string>
+    <string name="behind">behind</string>
+    <string name="between">between</string>
+    <string name="in">in</string>
+    <string name="in_front">in_front</string>
+    <string name="on">on</string>
+    <string name="to_the_left">to_the_left</string>
+    <string name="to_the_right">to_the_right</string>
+    <string name="under">under</string>
+
+    <string name="behind_without_">Behind</string>
+    <string name="between_without_">Between</string>
+    <string name="in_without_">In</string>
+    <string name="in_front_without_">In Front</string>
+    <string name="on_without_">On</string>
+    <string name="to_the_left_without_">To The Left</string>
+    <string name="to_the_right_without_">To The Right</string>
+    <string name="under_without_">Under</string>
+    <string name="january">January</string>
+    <string name="february">February</string>
+    <string name="march">March</string>
+    <string name="april">April</string>
+    <string name="may">May</string>
+    <string name="june">June</string>
+    <string name="july">July</string>
+    <string name="august">August</string>
+    <string name="september">September</string>
+    <string name="october">October</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
+    <string name="autumn">Autumn</string>
+    <string name="winter">Winter</string>
+    <string name="spring">Spring</string>
+    <string name="theme_city">City</string>
+    <string name="theme_nature">Nature</string>
+    <string name="theme_animal">Animal</string>
+    <string name="theme_hightech">Hightech</string>
+    <string name="example">example</string>
+    <string name="communication">communication</string>
+    <string name="international">international</string>
+    <string name="development">development</string>
+    <string name="environment">environment</string>
+    <string name="programming">programming</string>
+    <string name="technology">technology</string>
+    <string name="education">education</string>
+    <string name="challenge">challenge</string>
+    <string name="correct_next_sequence">Correct! Prepare for the next sequence.</string>
+    <string name="congratulations_message_number">Congratulations! You have successfully completed the number order!</string>
+
+    <string name="innovation">innovation</string>
+    <string name="opportunity">opportunity</string>
+    <string name="experience">experience</string>
+    <string name="knowledge">knowledge</string>
+    <string name="creativity">creativity</string>
+    <string name="solution">solution</string>
+    <string name="enter_digits_forward">Please enter the digits from the beginning to the end</string>
+    <string name="enter_digits_backward">Please enter the digits in a backward manner</string>
+    <string name="achievement">achievement</string>
+    <string name="motivation">motivation</string>
+    <string name="inspiration">inspiration</string>
+    <string name="success">success</string>
+    <string name="imagination">imagination</string>
+    <string name="complete_questions_prompt">You have completed all questions. Do you want to continue?</string>
+    <string name="congratulations_message">Congratulations! Days are in the correct order!</string>
+    <string name="try_again_message">Try again! Days are not in the correct order.</string>
+    <string name="incorrect_try_again">Incorrect, try again!</string>
+    <string name="reset_button_text">Reset</string>
+    <string name="instructions_forward">Remember the digits from the beginning to the end</string>
+    <string name="instructions_backward">Remember the digits in a backward manner</string>
+    <string name="correct_answer">Correct!</string>
+    <string name="congratulations_message_word">Congratulations! You have spelled %d words correctly!</string>
+    <string name="congratulations_title">Congratulations!</string>
+    <string name="continue_button">Continue</string>
+    <string name="finish_button">Finish</string>
+    <string name="just_congratulations_message">Congratulations!</string>
+
+
+    <string name="months_correct_order_message">Congratulations! Months are in the correct order!</string>
+    <string name="months_incorrect_order_message">Try again! Months are not in the correct order.</string>
+    <string name="enter_number">Please enter a number.</string>
+    <string name="completed_all_rounds_message">You have completed all rounds!</string>
+
+    <string-array name="seasons_with_capital_array">
+        <item>Spring</item>
+        <item>Summer</item>
+        <item>Autumn</item>
+        <item>Winter</item>
+    </string-array>
+    <string name="congratulations_all_seasons">Congratulations! You now know all the seasons!</string>
+
+
+
+    <string name="congratulations_all_positions">Congratulations! You now know all the positions!</string>
+    <string name="direction_behind_capitalized">Behind</string>
+    <string name="direction_between_capitalized">Between</string>
+    <string name="direction_in_capitalized">In</string>
+    <string name="direction_in_front_capitalized">In Front</string>
+    <string name="follow_ball_instructions">Follow the ball with your eyes.</string>
+
+    <string name="direction_on_capitalized">On</string>
+    <string name="direction_to_the_left_capitalized">To The Left</string>
+    <string name="direction_to_the_right_capitalized">To The Right</string>
+    <string name="direction_under_capitalized">Under</string>
+    <string name="days_of_week1">Days of Week</string>
+    <string name="months_of_year1">Months of Year</string>
 
 
 </resources>

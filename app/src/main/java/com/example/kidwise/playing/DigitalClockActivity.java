@@ -42,7 +42,7 @@ public class DigitalClockActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 } else {
-                    Toast.makeText(getApplicationContext(), "Incorrect, try again!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.incorrect_try_again), Toast.LENGTH_SHORT).show();
 
                 }
             }

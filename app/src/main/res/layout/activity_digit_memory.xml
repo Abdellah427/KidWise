@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:text="Remember the digits from beginning to end"
+        android:text="@string/remember_the_digits_from_beginning_to_end"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -29,7 +29,7 @@
         android:id="@+id/startButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start"
+        android:text="@string/start"
         android:layout_below="@id/answerEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp" />
@@ -38,7 +38,7 @@
         android:id="@+id/submitAnswerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="@string/submit"
         android:layout_below="@id/answerEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"

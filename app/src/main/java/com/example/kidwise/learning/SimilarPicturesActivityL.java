@@ -22,7 +22,7 @@ public class SimilarPicturesActivityL extends AppCompatActivity {
             { R.drawable.imagesimilar_d1, R.drawable.imagesimilar_d2, R.drawable.imagesimilar_d3 }  // Hightech
     };
 
-    private final String[] themes = {"City", "Nature", "Animal", "Hightech"};
+    private String[] themes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,13 @@ public class SimilarPicturesActivityL extends AppCompatActivity {
         optionOne = findViewById(R.id.optionOne);
         optionTwo = findViewById(R.id.optionTwo);
         themeTextView = findViewById(R.id.themeTextView);
+
+        themes = new String[]{
+                getString(R.string.theme_city),
+                getString(R.string.theme_nature),
+                getString(R.string.theme_animal),
+                getString(R.string.theme_hightech)
+        };
 
         setupRound();
 

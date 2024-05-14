@@ -1,3 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="app_name">KidWise</string>
+    <string name="register">S inscrire</string>
+    <string name="login">Se connecter</string>
+    <string name="change_language">Changer de langue</string>
+
+
+    <string name="email_hint">Entrez votre adresse e-mail</string>
+    <string name="password_hint">Entrez votre mot de passe</string>
+    <string name="firstName_hint">Entrez votre prénom</string>
+    <string name="lastName_hint">Entrez votre nom de famille</string>
+    <string name="last_name">Nom de famille</string>
+    <string name="first_name">Prénom</string>
+    <string name="learning">Apprentissage</string>
+    <string name="playing">Jouer</string>
+    <string name="hello">Bonjour</string>
+    <string name="read_clocks">Lire les horloges</string>
+    <string name="learn_seasons">Apprendre les saisons</string>
+    <string name="count_days_of_the_week">Compter les jours de la semaine</string>
+    <string name="count_months_of_the_year">Compter les mois de l année</string>
+    <string name="digit_memory_game">Jeu de mémoire des chiffres</string>
+    <string name="word_spelling_game">Jeu d orthographe de mots</string>
+    <string name="follow_directions">Suivre les instructions</string>
+    <string name="multiplication_practice">Exercices de multiplication</string>
+    <string name="find_similar_pictures">Trouver des images similaires</string>
+    <string name="follow_the_object">Suivre l objet</string>
+    <string name="digital_clock">Horloge numérique</string>
+    <string name="what_time_is_it">Quelle heure est-il ?</string>
+    <string name="next">Suivant</string>
+    <string name="enter_the_hour_and_minutes">Entrez l heure et les minutes</string>
+    <string name="end_of_questions">Fin des questions !</string>
+    <string name="try_again">Réessayer</string>
+    <string name="_00_00_am">00:00 AM</string>
+    <string name="enter_the_time_hh_mm_am_pm">Entrez l heure (hh:mm AM/PM)</string>
+    <string name="enter_answer">Entrez la réponse</string>
+    <string name="drag_and_drop_instruction">Faites glisser et déposez les jours de la semaine dans le bon ordre.</string>
+    <string name="instruction_month">Cliquez sur les mois pour les disposer en bas dans le bon ordre.</string>
+    <string name="instruction_day">Cliquez sur les jours pour les disposer en bas dans le bon ordre.</string>
+    <string name="congratulation">Félicitations</string>
+    <string name="go_to_home">Aller à la page d accueil</string>
+    <string name="reset">Réinitialiser</string>
+    <string name="go_to_home_1">Aller à la page d accueil</string>
+    <string name="remember_the_digits_from_beginning_to_end">Mémorisez les chiffres du début à la fin</string>
+    <string name="submit">Soumettre</string>
+    <string name="start">Démarrer</string>
+    <string name="reset_1">Réinitialiser</string>
+    <string name="question">Question</string>
+    <string name="enter_your_answer">Entrez votre réponse</string>
+    <string name="next_table">Tableau suivant</string>
+    <string name="days_of_week">Jours de la semaine</string>
+    <string name="months_of_year">Mois de l année</string>
+    <string name="seasons">Saisons</string>
+    <string name="summer">Été</string>
+    <string name="type_the_correct_spelling">Tapez l orthographe correcte</string>
+
+    <string name="authentication_successful">Authentification réussie </string>
+    <string name="authentication_failed">Échec de l authentification :</string>
+    <string name="please_enter_email_and_password">Veuillez entrer votre adresse e-mail et votre mot de passe.</string>
+
+    <string name="fill_all_fields">Veuillez remplir tous les champs.</string>
+    <string name="registration_successful">Inscription réussie.</string>
+    <string name="failed_to_save_user_info">Échec de l enregistrement des informations utilisateur : %s</string>
+    <string name="authentication_failed_s">Échec de l authentification : %s</string>
+    <string name="digital_time">Heure numérique</string>
+    <string name="analog_time">Heure analogique</string>
+    <string name="monday">Lundi</string>
+    <string name="tuesday">Mardi</string>
+    <string name="wednesday">Mercredi</string>
+    <string name="thursday">Jeudi</string>
+    <string name="friday">Vendredi</string>
+    <string name="saturday">Samedi</string>
+    <string name="sunday">Dimanche</string>
+    <string name="behind">derrière</string>
+    <string name="between">entre</string>
+    <string name="in">dans</string>
+    <string name="in_front">devant</string>
+    <string name="on">sur</string>
+    <string name="to_the_left">à gauche</string>
+    <string name="to_the_right">à droite</string>
+    <string name="under">sous</string>
+
+    <string name="behind_without_">Derrière</string>
+    <string name="between_without_">Entre</string>
+    <string name="in_without_">Dans</string>
+    <string name="in_front_without_">Devant</string>
+    <string name="on_without_">Sur</string>
+    <string name="to_the_left_without_">À Gauche</string>
+    <string name="to_the_right_without_">À Droite</string>
+    <string name="under_without_">Sous</string>
+    <string name="january">Janvier</string>
+    <string name="february">Février</string>
+    <string name="march">Mars</string>
+    <string name="april">Avril</string>
+    <string name="may">Mai</string>
+
 </resources>

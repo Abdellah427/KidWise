@@ -19,7 +19,7 @@
         android:id="@+id/redirect_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to Home"
+        android:text="@string/go_to_home_1"
         android:padding="8dp"/>
 
 </LinearLayout>

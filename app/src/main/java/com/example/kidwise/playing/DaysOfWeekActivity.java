@@ -16,9 +16,9 @@ import com.example.kidwise.R;
 public class DaysOfWeekActivity extends AppCompatActivity {
 
     private LinearLayout left_container, right_container;
-    private final String[] daysOfWeek = {
-            "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
-    };
+    private String[] daysOfWeek;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,15 @@ public class DaysOfWeekActivity extends AppCompatActivity {
 
         left_container = findViewById(R.id.left_container);
         right_container = findViewById(R.id.right_container);
-
+        daysOfWeek = new String[]{
+                getString(R.string.monday),
+                getString(R.string.tuesday),
+                getString(R.string.wednesday),
+                getString(R.string.thursday),
+                getString(R.string.friday),
+                getString(R.string.saturday),
+                getString(R.string.sunday)
+        };
         setupButtons();
     }
 
@@ -93,13 +101,13 @@ public class DaysOfWeekActivity extends AppCompatActivity {
         if (isInOrder && count == daysOfWeek.length) {
             resetOrder();
             Intent intent = new Intent(getApplicationContext(), CongratulationActivity.class);
-            intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, "Congratulations! Days are in the correct order!");
+            intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, getString(R.string.congratulations_message));
             startActivity(intent);
             finish();
 
 
         } else if (count == daysOfWeek.length) {
-            Toast.makeText(this, "Try again ! Days are not in the correct order.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.try_again_message), Toast.LENGTH_LONG).show();
             resetOrder();
         }
     }

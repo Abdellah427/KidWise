@@ -19,12 +19,7 @@ public class WordSpellActivity extends AppCompatActivity {
     private EditText spellingInput;
     private TextToSpeech tts;
     private String currentWord;
-    private String[] words = {
-            "example", "communication", "international", "development", "environment",
-            "programming", "technology", "education", "challenge", "innovation",
-            "opportunity", "experience", "knowledge", "creativity", "solution",
-            "achievement", "motivation", "inspiration", "success", "imagination"
-    };
+    private String[] words;
     private static int correctCount = 0;
     private final int totalQuestions = 5;
     private Button resetButton;
@@ -36,7 +31,30 @@ public class WordSpellActivity extends AppCompatActivity {
 
         spellingInput = findViewById(R.id.spellingInput);
         resetButton = new Button(this);
-        resetButton.setText("Reset");
+        resetButton.setText(getString(R.string.reset_button_text));
+        words = new String[]{
+                getString(R.string.example),
+                getString(R.string.communication),
+                getString(R.string.international),
+                getString(R.string.development),
+                getString(R.string.environment),
+                getString(R.string.programming),
+                getString(R.string.technology),
+                getString(R.string.education),
+                getString(R.string.challenge),
+                getString(R.string.innovation),
+                getString(R.string.opportunity),
+                getString(R.string.experience),
+                getString(R.string.knowledge),
+                getString(R.string.creativity),
+                getString(R.string.solution),
+                getString(R.string.achievement),
+                getString(R.string.motivation),
+                getString(R.string.inspiration),
+                getString(R.string.success),
+                getString(R.string.imagination)
+        };
+
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,7 +93,7 @@ public class WordSpellActivity extends AppCompatActivity {
         if (userEntry.equalsIgnoreCase(currentWord)) {
             correctCount++;
             if (correctCount == totalQuestions) {
-                String message = "Congratulations! You've spelled two words correctly!";
+                String message = getString(R.string.congratulations_message_word, 2);
                 ContinueDialog.showContinueDialog(this, message, resetButton);
                 correctCount = 0;
             } else {

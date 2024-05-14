@@ -9,7 +9,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:hint="Type the correct spelling"/>
+        android:hint="@string/type_the_correct_spelling"/>
 
     <ImageButton
         android:id="@+id/speakButton"
@@ -30,7 +30,7 @@
         android:layout_below="@id/spellingInput"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:text="Submit"
+        android:text="@string/submit"
         android:onClick="checkSpelling"/>
 
 </RelativeLayout>

@@ -17,7 +17,7 @@
         android:id="@+id/button_next_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="@string/next"
         android:textSize="20sp"
         android:layout_marginTop="16dp" />
 

@@ -42,13 +42,14 @@ public class DigitMemoryActivity extends AppCompatActivity {
         startButton = findViewById(R.id.startButton);
         submitButton = findViewById(R.id.submitAnswerButton);
         resetButton = new Button(this);
-        resetButton.setText("Reset");
+        resetButton.setText(getString(R.string.reset_button_text));
 
-        if(correctCount==0){
-            instructionTextView.setText("Remember the digits from the beginning to the end");
-        }else{
-            instructionTextView.setText("Remember the digits in a backward manner");
+        if (correctCount == 0) {
+            instructionTextView.setText(getString(R.string.instructions_forward));
+        } else {
+            instructionTextView.setText(getString(R.string.instructions_backward));
         }
+
 
         startButton.setOnClickListener(v -> startSequence());
         submitButton.setOnClickListener(v -> checkAnswer());
@@ -83,11 +84,12 @@ public class DigitMemoryActivity extends AppCompatActivity {
 
     private void showAnswerField() {
         instructionTextView.setTextSize(20);
-        if(correctCount==0){
-            instructionTextView.setText("Please enter the digits from the beginning to the end");
-        }else{
-            instructionTextView.setText("Please enter the digits in a backward manner");
+        if (correctCount == 0) {
+            instructionTextView.setText(getString(R.string.enter_digits_forward));
+        } else {
+            instructionTextView.setText(getString(R.string.enter_digits_backward));
         }
+
         answerEditText.setVisibility(View.VISIBLE);
         submitButton.setVisibility(View.VISIBLE);
     }
@@ -104,13 +106,14 @@ public class DigitMemoryActivity extends AppCompatActivity {
             if (correctCount >= 2) {
                 showDialog();
             } else {
-                Toast.makeText(this, "Correct! Prepare for the next sequence.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.correct_next_sequence), Toast.LENGTH_SHORT).show();
                 resetSequence();
                 startSequence();
             }
         } else {
-            Toast.makeText(this, "Incorrect! Try again.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.incorrect_try_again), Toast.LENGTH_SHORT).show();
         }
+
     }
 
     private String getSequenceAsString() {
@@ -122,7 +125,7 @@ public class DigitMemoryActivity extends AppCompatActivity {
     }
 
     private void showDialog() {
-        String message = "Congratulations! You've successfully completed the number order!";
+        String message = getString(R.string.congratulations_message_number);
         ContinueDialog.showContinueDialog(this, message, resetButton);
         resetSequence();
     }
@@ -135,14 +138,14 @@ public class DigitMemoryActivity extends AppCompatActivity {
         answerEditText.setVisibility(View.INVISIBLE);
         submitButton.setVisibility(View.INVISIBLE);
         startButton.setVisibility(View.VISIBLE);
-        if(correctCount==0){
-            instructionTextView.setText("Remember the digits from the beginning to the end");
-        }else{
-            instructionTextView.setText("Remember the digits in a backward manner");
+        if (correctCount == 0) {
+            instructionTextView.setText(getString(R.string.instructions_forward));
+        } else {
+            instructionTextView.setText(getString(R.string.instructions_backward));
         }
-        generateDigitSequence()
-        ;
+        generateDigitSequence();
     }
+
 
     private void generateDigitSequence() {
         Random random = new Random();

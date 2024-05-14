@@ -16,10 +16,7 @@ import com.example.kidwise.R;
 public class MonthsOfYearActivity extends AppCompatActivity {
 
     private LinearLayout left_container, right_container;
-    private final String[] monthsOfYear = {
-            "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
-    };
-
+    private  String[] monthsOfYear;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +24,21 @@ public class MonthsOfYearActivity extends AppCompatActivity {
 
         left_container = findViewById(R.id.left_container);
         right_container = findViewById(R.id.right_container);
+
+        monthsOfYear = new String[]{
+                getString(R.string.january),
+                getString(R.string.february),
+                getString(R.string.march),
+                getString(R.string.april),
+                getString(R.string.may),
+                getString(R.string.june),
+                getString(R.string.july),
+                getString(R.string.august),
+                getString(R.string.september),
+                getString(R.string.october),
+                getString(R.string.november),
+                getString(R.string.december)
+        };
 
         setupButtons();
     }
@@ -92,13 +104,14 @@ public class MonthsOfYearActivity extends AppCompatActivity {
         if (isInOrder && count == monthsOfYear.length) {
             resetOrder();
             Intent intent = new Intent(getApplicationContext(), CongratulationActivity.class);
-            intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, "Congratulations! Months are in the correct order!");
+            intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, getString(R.string.months_correct_order_message));
             startActivity(intent);
             finish();
         } else if (count == monthsOfYear.length) {
-            Toast.makeText(this, "Try again ! Months are not in the correct order.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.months_incorrect_order_message), Toast.LENGTH_LONG).show();
             resetOrder();
         }
+
     }
 
     private void resetOrder() {

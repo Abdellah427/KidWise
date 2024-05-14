@@ -33,11 +33,9 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        // Initialize Firebase Auth and Database Reference
         mAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
-        // Initialize views
         emailEditText = findViewById(R.id.email);
         passwordEditText = findViewById(R.id.password);
         firstNameEditText = findViewById(R.id.firstName);
@@ -59,7 +57,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void createAccount(String email, String password, String firstName, String lastName) {
         if (email.isEmpty() || password.isEmpty() || firstName.isEmpty() || lastName.isEmpty()) {
-            Toast.makeText(RegisterActivity.this, "Please fill in all fields.", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterActivity.this, getString(R.string.fill_all_fields), Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -69,27 +67,24 @@ public class RegisterActivity extends AppCompatActivity {
 
                         FirebaseUser user = mAuth.getCurrentUser();
                         if (user != null) {
-                            // Creating a user information map
                             HashMap<String, String> userInfo = new HashMap<>();
                             userInfo.put("firstName", firstName);
                             userInfo.put("lastName", lastName);
 
-                            // Save the additional fields in Firebase Database under the "Users" node
                             databaseReference.child("Users").child(user.getUid()).setValue(userInfo)
                                     .addOnCompleteListener(task1 -> {
                                         if (task1.isSuccessful()) {
-                                            Toast.makeText(RegisterActivity.this, "Registration successful.", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(RegisterActivity.this, getString(R.string.registration_successful), Toast.LENGTH_SHORT).show();
                                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                             startActivity(intent);
                                             finish();
                                         } else {
-                                            Toast.makeText(RegisterActivity.this, "Failed to save user information: " + task1.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                            Toast.makeText(RegisterActivity.this, getString(R.string.failed_to_save_user_info, task1.getException().getMessage()), Toast.LENGTH_LONG).show();
                                         }
                                     });
                         }
                     } else {
-                        // If sign in fails, display a message to the user.
-                        Toast.makeText(RegisterActivity.this, "Authentication failed: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(RegisterActivity.this, getString(R.string.authentication_failed_s, task.getException().getMessage()), Toast.LENGTH_LONG).show();
                     }
                 });
     }

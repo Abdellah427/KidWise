@@ -19,7 +19,7 @@
         android:id="@+id/button_next_multiplication"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next Table"
+        android:text="@string/next_table"
         android:textSize="18sp" />
 
 </LinearLayout>

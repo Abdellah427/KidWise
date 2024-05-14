@@ -28,7 +28,7 @@ public class DirectionsActivity extends AppCompatActivity {
     private final int totalRounds = 8;
 
     private final String[] directions = {"behind", "between", "in", "in_front", "on", "to_the_left", "to_the_right", "under"};
-    private final String[] directionsWithout_ = {"Behind", "Between", "In", "In Front", "On", "To The Left", "To The Right", "Under"};
+    private  String[] directionsWithout_ ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,16 @@ public class DirectionsActivity extends AppCompatActivity {
         crossThree = findViewById(R.id.crossThree);
         crossFour = findViewById(R.id.crossFour);
 
+        directionsWithout_ = new String[]{
+                getString(R.string.behind_without_),
+                getString(R.string.between_without_),
+                getString(R.string.in_without_),
+                getString(R.string.in_front_without_),
+                getString(R.string.on_without_),
+                getString(R.string.to_the_left_without_),
+                getString(R.string.to_the_right_without_),
+                getString(R.string.under_without_)
+        };
         setupQuestion();
 
         View.OnClickListener listener = new View.OnClickListener() {
@@ -70,13 +80,13 @@ public class DirectionsActivity extends AppCompatActivity {
         deselectAllRadioButtons();
         clearCrosses();
         if (correct) {
-            Toast.makeText(DirectionsActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(DirectionsActivity.this, getString(R.string.correct_answer), Toast.LENGTH_SHORT).show();
             currentRound++;
             if (currentRound < totalRounds) {
                 setupQuestion();
             } else {
                 Intent intent = new Intent(getApplicationContext(), CongratulationActivity.class);
-                intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, "Congratulations! You now know all the positions!");
+                intent.putExtra(CongratulationActivity.EXTRA_MESSAGE, getString(R.string.congratulations_all_positions));
                 startActivity(intent);
                 finish();
             }
@@ -85,9 +95,10 @@ public class DirectionsActivity extends AppCompatActivity {
             if (crossImageView != null) {
                 crossImageView.setVisibility(View.VISIBLE);
             }
-            Toast.makeText(DirectionsActivity.this, "Incorrect, try again!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(DirectionsActivity.this, getString(R.string.incorrect_try_again), Toast.LENGTH_SHORT).show();
         }
     }
+
 
     private void setupQuestion() {
         deselectAllRadioButtons();

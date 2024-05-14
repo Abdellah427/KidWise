@@ -41,10 +41,11 @@ public class ClockActivityL extends AppCompatActivity {
     private void updateClockType() {
         if (isDigitalClock) {
             clockImageView.setImageResource(R.drawable.digital_lesson);
-            clockTypeTextView.setText("Digital Time");
+            clockTypeTextView.setText(getString(R.string.digital_time));
         } else {
             clockImageView.setImageResource(R.drawable.analog_lesson);
-            clockTypeTextView.setText("Analog Time");
+            clockTypeTextView.setText(getString(R.string.analog_time));
         }
     }
+
 }

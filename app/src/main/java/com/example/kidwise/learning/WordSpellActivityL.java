@@ -17,12 +17,8 @@ public class WordSpellActivityL extends AppCompatActivity {
 
     private TextToSpeech tts;
     private String currentWord;
-    private String[] words = {
-            "example", "communication", "international", "development", "environment",
-            "programming", "technology", "education", "challenge", "innovation",
-            "opportunity", "experience", "knowledge", "creativity", "solution",
-            "achievement", "motivation", "inspiration", "success", "imagination"
-    };
+    private String[] words;
+
     private Button nextButton;
     private TextView wordTextView;
 
@@ -35,6 +31,28 @@ public class WordSpellActivityL extends AppCompatActivity {
 
         nextButton = findViewById(R.id.button_next);
         wordTextView = findViewById(R.id.textView_word);
+        words = new String[]{
+                getString(R.string.example),
+                getString(R.string.communication),
+                getString(R.string.international),
+                getString(R.string.development),
+                getString(R.string.environment),
+                getString(R.string.programming),
+                getString(R.string.technology),
+                getString(R.string.education),
+                getString(R.string.challenge),
+                getString(R.string.innovation),
+                getString(R.string.opportunity),
+                getString(R.string.experience),
+                getString(R.string.knowledge),
+                getString(R.string.creativity),
+                getString(R.string.solution),
+                getString(R.string.achievement),
+                getString(R.string.motivation),
+                getString(R.string.inspiration),
+                getString(R.string.success),
+                getString(R.string.imagination)
+        };
 
         pickWordAndSpeak();
 
@@ -59,7 +77,7 @@ public class WordSpellActivityL extends AppCompatActivity {
         int wordIndex = new Random().nextInt(words.length);
         currentWord = words[wordIndex];
         speakWord(null);
-        wordTextView.setText(currentWord); // Mettre à jour le texte du TextView
+        wordTextView.setText(currentWord);
     }
 
     public void speakWord(View view) {

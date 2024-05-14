@@ -3,6 +3,8 @@ package com.example.kidwise.redirect;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
@@ -13,12 +15,17 @@ import com.example.kidwise.R;
 import com.example.kidwise.account.RegisterActivity;
 import com.example.kidwise.playing.FollowObjectActivity;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button login;
     private Button register;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.activity_main);
@@ -31,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent loginActivity = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(loginActivity);
-                
+
             }
         });
 
@@ -43,6 +50,29 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+    }
+    public void onChangeLanguageClick(View view) {
+        Resources res = getResources();
+        Configuration config = res.getConfiguration();
+
+        if (config.locale.getLanguage().equals("en")) {
+            setLocale("fr");
+        } else if (config.locale.getLanguage().equals("fr")) {
+            setLocale("tr");
+        } else {
+            setLocale("en");
+        }
+        recreate();
+    }
+
+    private void setLocale(String lang) {
+        Locale locale = new Locale(lang);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
     }
 
 }

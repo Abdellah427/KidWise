@@ -17,7 +17,9 @@ public class DirectionsActivityL extends AppCompatActivity {
     private int currentRound = 0;
     private final int totalRounds = 8;
     private final String[] directions = {"behind", "between", "in", "in_front", "on", "to_the_left", "to_the_right", "under"};
-    private final String[] directionsWithout_ = {"Behind", "Between", "In", "In Front", "On", "To The Left", "To The Right", "Under"};
+
+
+    private  String[] directionsWithout_ ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,17 @@ public class DirectionsActivityL extends AppCompatActivity {
         imageViewDirection = findViewById(R.id.imageView_direction);
         nextButton = findViewById(R.id.button_next);
         directionTextView = findViewById(R.id.textView_direction);
+
+        directionsWithout_ = new String[]{
+                getString(R.string.behind_without_),
+                getString(R.string.between_without_),
+                getString(R.string.in_without_),
+                getString(R.string.in_front_without_),
+                getString(R.string.on_without_),
+                getString(R.string.to_the_left_without_),
+                getString(R.string.to_the_right_without_),
+                getString(R.string.under_without_)
+        };
 
         loadDirectionImage(currentRound);
 

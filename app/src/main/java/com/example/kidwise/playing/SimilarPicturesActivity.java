@@ -45,13 +45,14 @@ public class SimilarPicturesActivity extends AppCompatActivity {
 
 
         resetButton = new Button(this);
-        resetButton.setText("Reset");
+        resetButton.setText(getString(R.string.reset_button_text));
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 resetGame();
             }
         });
+
 
         setupRound();
 
@@ -120,24 +121,24 @@ public class SimilarPicturesActivity extends AppCompatActivity {
     private void handleAnswer(ImageView selectedOption) {
         boolean isCorrect = (boolean) selectedOption.getTag();
         if (isCorrect) {
-            Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.correct_answer), Toast.LENGTH_SHORT).show();
             currentRound++;
             if (currentRound < imageIds.length) {
                 setupRound();
             } else {
-                String message = "You've completed all rounds ! You've completed all rounds !!";
+                String message = getString(R.string.completed_all_rounds_message);
                 ContinueDialog.showContinueDialog(this, message, resetButton);
-
             }
         } else {
-            Toast.makeText(this, "Incorrect, try again!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.incorrect_try_again), Toast.LENGTH_SHORT).show();
         }
     }
 
 
+
     public static int generateRandomNumber(int n, int m, int x) {
         if (n > m) {
-            throw new IllegalArgumentException("La limite inférieure doit être inférieure ou égale à la limite supérieure.");
+            throw new IllegalArgumentException("The lower limit must be less than or equal to the upper limit.\"");
         }
 
         Random random = new Random();
@@ -151,7 +152,7 @@ public class SimilarPicturesActivity extends AppCompatActivity {
     }
     public static int generateRandomNumber(int n, int m, int x1,int x2) {
         if (n > m) {
-            throw new IllegalArgumentException("La limite inférieure doit être inférieure ou égale à la limite supérieure.");
+            throw new IllegalArgumentException("The lower limit must be less than or equal to the upper limit.\"");
         }
 
         Random random = new Random();

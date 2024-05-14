@@ -13,15 +13,26 @@ public class DaysOfWeekActivityL extends AppCompatActivity {
     private Button nextButton;
 
     private int currentDayIndex = 0;
-    private final String[] daysOfWeek = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
+    private String[] daysOfWeek;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_days_of_week_l);
 
         dayTextView = findViewById(R.id.textView_day);
         nextButton = findViewById(R.id.button_next_day);
+        daysOfWeek = new String[]{
+                getString(R.string.monday),
+                getString(R.string.tuesday),
+                getString(R.string.wednesday),
+                getString(R.string.thursday),
+                getString(R.string.friday),
+                getString(R.string.saturday),
+                getString(R.string.sunday)
+        };
+
 
         loadDay(currentDayIndex);
 

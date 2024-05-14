@@ -33,7 +33,7 @@ public class MultiplicationActivity extends AppCompatActivity {
         multiplicationQuestion = findViewById(R.id.multiplicationQuestion);
         answerField = findViewById(R.id.answerField);
         resetButton = new Button(this);
-        resetButton.setText("Reset");
+        resetButton.setText(getString(R.string.reset_button_text));
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +60,7 @@ public class MultiplicationActivity extends AppCompatActivity {
             multiplicationQuestion.setText(question.factor1 + " x " + question.factor2 + " = ?");
             currentCorrectAnswer = question.answer;
         } else {
-            String message = "Congratulations! You've successfully completed the multiplication!";
+            String message = getString(R.string.congratulations_message);
             ContinueDialog.showContinueDialog(this, message, resetButton);
 
         }
@@ -73,13 +73,14 @@ public class MultiplicationActivity extends AppCompatActivity {
                 currentQuestionIndex++;
                 showQuestion();
             } else {
-                Toast.makeText(this, "Incorrect, try again!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.incorrect_try_again), Toast.LENGTH_SHORT).show();
             }
             answerField.setText("");
         } catch (NumberFormatException e) {
-            Toast.makeText(this, "Please enter a number.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.enter_number), Toast.LENGTH_SHORT).show();
         }
     }
+
 
 
 

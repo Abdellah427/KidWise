@@ -27,7 +27,7 @@ public class FollowObjectActivity extends AppCompatActivity {
 
         ball = findViewById(R.id.ball);
         instructions = findViewById(R.id.instructions);
-        instructions.setText("Follow the ball with your eyes.");
+        instructions.setText(getString(R.string.follow_ball_instructions));
 
         handler = new Handler();
         handler.postDelayed(new Runnable() {

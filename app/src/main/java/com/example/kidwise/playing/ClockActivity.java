@@ -53,7 +53,7 @@ public class ClockActivity extends AppCompatActivity {
                     } else {
                         nextButton.setEnabled(false);
                         questionCount=0;
-                        ContinueDialog.showContinueDialog(ClockActivity.this, "You've completed all questions. Do you want to continue?", nextButton);
+                        ContinueDialog.showContinueDialog(ClockActivity.this, getString(R.string.complete_questions_prompt), nextButton);
                     }
                 } else {
                     questionText.setText(getString(R.string.try_again));

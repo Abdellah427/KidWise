@@ -13,7 +13,7 @@ public class MonthsOfYearActivityL extends AppCompatActivity {
     private Button nextButton;
 
     private int currentMonthIndex = 0;
-    private final String[] months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    private  String[] months;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,21 @@ public class MonthsOfYearActivityL extends AppCompatActivity {
 
         monthTextView = findViewById(R.id.textView_month);
         nextButton = findViewById(R.id.button_next_month);
+
+        months = new String[]{
+                getString(R.string.january),
+                getString(R.string.february),
+                getString(R.string.march),
+                getString(R.string.april),
+                getString(R.string.may),
+                getString(R.string.june),
+                getString(R.string.july),
+                getString(R.string.august),
+                getString(R.string.september),
+                getString(R.string.october),
+                getString(R.string.november),
+                getString(R.string.december)
+        };
 
         loadMonth(currentMonthIndex);
 
