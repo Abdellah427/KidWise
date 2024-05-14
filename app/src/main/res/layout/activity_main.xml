@@ -6,44 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".redirect.MainActivity">
 
-
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="304dp"
-        android:layout_height="493dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="379dp"
+        android:layout_height="585dp"
+        app:layout_constraintBottom_toTopOf="@+id/login"
+        app:layout_constraintDimensionRatio="H,304:493"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.067"
         app:srcCompat="@drawable/welcome" />
 
     <Button
         android:id="@+id/login"
-        android:layout_width="198dp"
-        android:layout_height="49dp"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
         android:text="@string/login"
-
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.175"
+        app:layout_constraintWidth_default="wrap"
         style="@style/VioletButtonStyle"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         />
 
     <Button
         android:id="@+id/register"
-        android:layout_width="198dp"
-        android:layout_height="49dp"
+        style="@style/VioletButtonStyle"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/register"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.606"
-        style="@style/VioletButtonStyle"/>
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintWidth_default="wrap" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
