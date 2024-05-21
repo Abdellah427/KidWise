@@ -26,10 +26,10 @@ public class SeasonActivityL extends AppCompatActivity {
         nextButton = findViewById(R.id.button_next);
         seasonTextView = findViewById(R.id.textView_season);
         seasonNames = new String[]{
-                getString(R.string.spring),
-                getString(R.string.summer),
                 getString(R.string.autumn),
-                getString(R.string.winter)
+                getString(R.string.winter),
+                getString(R.string.spring),
+                getString(R.string.summer)
         };
         loadSeasonVideo(currentSeasonIndex);
 

@@ -17,8 +17,8 @@ public class FollowObjectActivity extends AppCompatActivity {
     private int y=yIni;
     private int  x;
     private int xDirection = 1;
-    private int yDirection = 150;
-    private static final int yIni = 200;
+    private int yDirection = 50;
+    private static final int yIni = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +34,9 @@ public class FollowObjectActivity extends AppCompatActivity {
             @Override
             public void run() {
                 moveBall();
-                handler.postDelayed(this, 25);
+                handler.postDelayed(this, 50);
             }
-        }, 5000); // 10 millisecond delay
+        }, 1000);
     }
 
     private void moveBall() {

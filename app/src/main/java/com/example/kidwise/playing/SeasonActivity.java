@@ -46,10 +46,10 @@ public class SeasonActivity extends AppCompatActivity {
         crossFour = findViewById(R.id.crossFour);
 
         seasonsWithCapital = new String[]{
-                getString(R.string.spring),
-                getString(R.string.summer),
                 getString(R.string.autumn),
-                getString(R.string.winter)
+                getString(R.string.winter),
+                getString(R.string.spring),
+                getString(R.string.summer)
         };
 
         setupQuestion();
